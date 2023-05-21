@@ -1,0 +1,56 @@
+<div class="card-group">
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" *ngFor="let c of cars">
+    <div class="card-header">{{c.brand}} | {{c.model}}</div>
+    <div class="card-body">
+      <h5 class="card-title">
+        <p>Двигатель: {{c.engine}}</p>
+        <p> ЛС: {{c.ls}}</p>
+        <p> Трансмиссия: {{c.transmission}}</p>
+      </h5>
+
+    </div>
+    <div class="card-footer">
+      <p class="card-text">Владелец: {{c.owner}}</p>
+      <p class="card-text">Email: {{c.email}}</p>
+      <p class="card-text">Тел.номер: {{c.phoneNumber}}</p>
+    </div>
+    </div>
+</div>
+
+<form (submit)="save(brand.value, model.value, engine.value, ls.value, transmission.value, owner.value, email.value,phoneNumber.value)">
+  <div class="form-group">
+    <label for="brand">brand</label>
+    <input type="text" class="form-control" id="brand" #brand>
+  </div>
+  <div class="form-group">
+    <label for="model">model</label>
+    <input type="text" class="form-control" id="model" #model>
+  </div>
+  <div class="form-group">
+    <label for="engine">engine</label>
+    <input type="text" class="form-control" id="engine" #engine>
+  </div>
+  <div class="form-group">
+    <label for="ls">ls</label>
+    <input type="email" class="form-control" id="ls" #ls>
+  </div>
+  <div class="form-group">
+    <label for="transmission">transmission</label>
+    <input type="text" class="form-control" id="transmission" #transmission>
+  </div>
+  <div class="form-group">
+    <label for="owner">owner</label>
+    <input type="text" class="form-control" id="owner" #owner>
+  </div>
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="text" class="form-control" id="email" #email>
+  </div>
+  <div class="form-group">
+    <label for="phoneNumber">phoneNumber</label>
+    <input type="text" class="form-control" id="phoneNumber" #phoneNumber>
+  </div>
+  <button type="submit" style="width: 100%" class="btn btn-outline-primary">Create</button>
+</form>
+
+
